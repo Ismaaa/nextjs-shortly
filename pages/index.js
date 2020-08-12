@@ -9,6 +9,7 @@ import Headline from "../src/components/Headline";
 import Hero from "../src/components/Hero";
 import Navbar from "../src/components/Navbar";
 import LinksList from "../src/components/LinksList";
+export const config = { amp: true }
 
 export default function Shortly() {
   return (
