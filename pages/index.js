@@ -27,7 +27,7 @@ export default function Shortly() {
         <meta property="og:url" content="https://shortly.ismaaa.me/"/>
         <meta property="og:title" content="Shortly - More than just shorter links"/>
         <meta property="og:description" content="Free URL shortener"/>
-        <meta property="og:image" content="/android-chrome-512x512.png"/>
+        <meta property="og:image" content="https://shortly.ismaaa.me/android-chrome-512x512.png"/>
 
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://shortly.ismaaa.me/"/>
