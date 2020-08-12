@@ -4,7 +4,7 @@ import Button from '../../elements/Button'
 
 const Navbar = () => (
   <nav className={styles.Navbar}>
-    <img src='/assets/logo.svg' alt='Shortly' className='Navbar__logo' />
+    <img src='/assets/logo.svg' alt='Shortly' className={styles.Navbar__logo} />
     <div className={styles.Navbar__links}>
       <div className={styles.Navbar__navigation}>
         <div className={styles.Navbar__navigationItem}>Features</div>

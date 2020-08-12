@@ -31,9 +31,9 @@ const LinkItem = ({ link }) => {
           text={`https://rel.ink/${link.hashid}`}
         >
           <span className={`
-            ${styles.LinksList__copyToClipboard}
-            ${showCopiedText ? styles['LinksList__copyToClipboard--copied'] : ''}
-          `}
+                        ${styles.LinksList__copyToClipboard}
+                        ${showCopiedText ? styles['LinksList__copyToClipboard--copied'] : ''}
+                      `}
           >{showCopiedText ? 'Copied!' : 'Copy'}
           </span>
         </CopyToClipboard>
