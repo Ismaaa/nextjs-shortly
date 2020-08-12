@@ -5,7 +5,7 @@ import Button from "../../elements/Button";
 
 const Cta = ({ text }) => (
   <div className={styles.Cta}>
-    <h1 className={styles.Cta__title}>{text}</h1>
+    <h2 className={styles.Cta__title}>{text}</h2>
     <Button title="Get Started" rounded />
   </div>
 );

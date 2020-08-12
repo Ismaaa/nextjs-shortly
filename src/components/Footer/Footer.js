@@ -6,7 +6,7 @@ const Footer = () => {
   const renderLinks = () =>
     Object.values(links).map((link) => (
       <div key={link.title} className={styles.Footer__linkGroup}>
-        <h1 className={styles.Footer__linkTitle}>{link.title}</h1>
+        <h4 className={styles.Footer__linkTitle}>{link.title}</h4>
         <div className={styles.Footer__linkChildren}>
           {link.items.map((item) => (
             <span key={item} className={styles.Footer__linkSubItem}>
