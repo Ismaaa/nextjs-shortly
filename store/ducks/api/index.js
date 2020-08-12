@@ -1,28 +1,28 @@
 // constants
-import axios from 'axios';
-import { addLink } from '../links';
+import axios from 'axios'
+import { addLink } from '../links'
 
 const INITIAL_STATE = {
   data: null,
   loading: false,
-  error: null,
-};
+  error: null
+}
 
-const API_REQUEST = 'API_REQUEST';
-const API_SUCCESS = 'API_SUCCESS';
-const API_ERROR = 'API_ERROR';
+const API_REQUEST = 'API_REQUEST'
+const API_SUCCESS = 'API_SUCCESS'
+const API_ERROR = 'API_ERROR'
 
 // reducer
-export default function reducer(state = INITIAL_STATE, action) {
+export default function reducer (state = INITIAL_STATE, action) {
   switch (action.type) {
     case API_REQUEST:
-      return { ...state, error: null, loading: true, data: null };
+      return { ...state, error: null, loading: true, data: null }
     case API_SUCCESS:
-      return { ...state, loading: false, data: action.payload };
+      return { ...state, loading: false, data: action.payload }
     case API_ERROR:
-      return { ...state, loading: false, error: action.payload };
+      return { ...state, loading: false, error: action.payload }
     default:
-      return state;
+      return state
   }
 }
 
@@ -30,37 +30,37 @@ export default function reducer(state = INITIAL_STATE, action) {
 export const apiSuccess = (payload) => async (dispatch) => {
   dispatch({
     type: API_SUCCESS,
-    payload,
-  });
-};
+    payload
+  })
+}
 
 export const apiError = (payload) => async (dispatch) => {
   dispatch({
     type: API_ERROR,
-    payload,
-  });
-};
+    payload
+  })
+}
 
 export const apiRequest = (method, url, data) => async (dispatch) => {
-  dispatch({ type: API_REQUEST });
+  dispatch({ type: API_REQUEST })
   await axios({
     method,
     url,
-    data,
+    data
   })
     .then((res) => {
-      dispatch(apiSuccess(res.data));
+      dispatch(apiSuccess(res.data))
     })
     .catch((exception) => {
-      console.error(exception);
-    });
-};
+      console.error(exception)
+    })
+}
 
 // middleware
 export const apiMiddleware = ({ dispatch }) => (next) => (action) => {
-  next(action);
+  next(action)
 
   if (action.type === API_SUCCESS) {
-    dispatch(addLink(action.payload));
+    dispatch(addLink(action.payload))
   }
-};
+}

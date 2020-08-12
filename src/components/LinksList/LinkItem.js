@@ -1,29 +1,28 @@
 import styles from './LinksList.module.css'
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
-import Button from "../../elements/Button";
+import React, { useState } from 'react'
+import PropTypes from 'prop-types'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 const LinkItem = ({ link }) => {
-  const [showCopiedText, setShowCopiedText] = useState(false);
+  const [showCopiedText, setShowCopiedText] = useState(false)
 
   const handleCopy = () => {
-    setShowCopiedText(true);
+    setShowCopiedText(true)
 
     setTimeout(() => {
-      setShowCopiedText(false);
-    }, 3000);
-  };
+      setShowCopiedText(false)
+    }, 3000)
+  }
 
   return (
-    <div className={styles['LinksList__item']}>
-      <span className={styles['LinksList__link']}>{link.url}</span>
-      <div className={styles['LinksList__actions']}>
+    <div className={styles.LinksList__item}>
+      <span className={styles.LinksList__link}>{link.url}</span>
+      <div className={styles.LinksList__actions}>
         <a
-          className={styles['LinksList__generatedLink']}
+          className={styles.LinksList__generatedLink}
           href={`https://rel.ink/${link.hashid}`}
-          target="_blank"
-          rel="noreferrer"
+          target='_blank'
+          rel='noopener noreferrer'
         >
           https://rel.ink/${link.hashid}
         </a>
@@ -32,21 +31,23 @@ const LinkItem = ({ link }) => {
           text={`https://rel.ink/${link.hashid}`}
         >
           <span className={`
-            ${styles['LinksList__copyToClipboard']}
+            ${styles.LinksList__copyToClipboard}
             ${showCopiedText ? styles['LinksList__copyToClipboard--copied'] : ''}
-          `}>{showCopiedText ? 'Copied!' : 'Copy'}</span>
+          `}
+          >{showCopiedText ? 'Copied!' : 'Copy'}
+          </span>
         </CopyToClipboard>
       </div>
     </div>
-  );
-};
+  )
+}
 
 LinkItem.propTypes = {
   link: PropTypes.shape({
     hashid: PropTypes.string.isRequired,
     url: PropTypes.string.isRequired,
-    created_at: PropTypes.string.isRequired,
-  }).isRequired,
-};
+    created_at: PropTypes.string.isRequired
+  }).isRequired
+}
 
-export default LinkItem;
+export default LinkItem

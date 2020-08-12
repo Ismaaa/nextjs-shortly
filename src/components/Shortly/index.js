@@ -1,3 +1,3 @@
-import Shortly from './Shortly';
+import Shortly from './Shortly'
 
-export default Shortly;
+export default Shortly

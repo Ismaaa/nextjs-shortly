@@ -1,6 +1,6 @@
 import styles from './Input.module.css'
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const Input = ({ name, placeholder, handleChange, type, error }) => (
   <input
@@ -11,20 +11,20 @@ const Input = ({ name, placeholder, handleChange, type, error }) => (
     onChange={handleChange}
     required
   />
-);
+)
 
 Input.defaultProps = {
   placeholder: '',
   type: 'text',
-  error: false,
-};
+  error: false
+}
 
 Input.propTypes = {
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   handleChange: PropTypes.func.isRequired,
   type: PropTypes.string,
-  error: PropTypes.bool,
-};
+  error: PropTypes.bool
+}
 
-export default Input;
+export default Input

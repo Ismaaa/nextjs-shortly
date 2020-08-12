@@ -1,4 +1,4 @@
-import './Text.scss';
-import Text from './Text';
+import './Text.scss'
+import Text from './Text'
 
-export default Text;
+export default Text

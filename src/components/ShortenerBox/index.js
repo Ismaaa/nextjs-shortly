@@ -1,3 +1,3 @@
-import ShortenerBox from './ShortenerBox';
+import ShortenerBox from './ShortenerBox'
 
-export default ShortenerBox;
+export default ShortenerBox

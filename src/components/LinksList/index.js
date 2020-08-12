@@ -1,3 +1,3 @@
-import LinksList from './LinksList';
+import LinksList from './LinksList'
 
-export default LinksList;
+export default LinksList

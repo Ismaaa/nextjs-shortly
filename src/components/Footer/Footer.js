@@ -1,6 +1,6 @@
-import styles from './Footer.module.css';
-import React from 'react';
-import links from './links.json';
+import styles from './Footer.module.css'
+import React from 'react'
+import links from './links.json'
 
 const Footer = () => {
   const renderLinks = () =>
@@ -15,20 +15,20 @@ const Footer = () => {
           ))}
         </div>
       </div>
-    ));
+    ))
 
   return (
     <footer className={styles.Footer}>
-      <img src="/assets/logo-white.svg" alt="Logo" className={styles.Footer__logo} />
+      <img src='/assets/logo-white.svg' alt='Logo' className={styles.Footer__logo} />
       <div className={styles.Footer__companyLinks}>{renderLinks()}</div>
       <div className={styles.Footer__socialLinks}>
-        <img src="/assets/icon-facebook.svg" alt="Facebook" />
-        <img src="/assets/icon-twitter.svg" alt="Twitter" />
-        <img src="/assets/icon-pinterest.svg" alt="Pinterest" />
-        <img src="/assets/icon-instagram.svg" alt="Instagram" />
+        <img src='/assets/icon-facebook.svg' alt='Facebook' />
+        <img src='/assets/icon-twitter.svg' alt='Twitter' />
+        <img src='/assets/icon-pinterest.svg' alt='Pinterest' />
+        <img src='/assets/icon-instagram.svg' alt='Instagram' />
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -1,19 +1,19 @@
 import { useMemo } from 'react'
-import {createStore, applyMiddleware, combineReducers} from 'redux'
+import { createStore, applyMiddleware, combineReducers } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
 
-import apiReducer, {apiMiddleware} from './ducks/api';
-import linksReducer from './ducks/links';
+import apiReducer, { apiMiddleware } from './ducks/api'
+import linksReducer from './ducks/links'
 
 const rootReducer = combineReducers({
   api: apiReducer,
-  links: linksReducer,
-});
+  links: linksReducer
+})
 
 let store
 
-function initStore(initialState) {
+function initStore (initialState) {
   return createStore(
     rootReducer,
     initialState,
@@ -29,7 +29,7 @@ export const initializeStore = (preloadedState) => {
   if (preloadedState && store) {
     _store = initStore({
       ...store.getState(),
-      ...preloadedState,
+      ...preloadedState
     })
     // Reset the current store
     store = undefined
@@ -43,7 +43,7 @@ export const initializeStore = (preloadedState) => {
   return _store
 }
 
-export function useStore(initialState) {
+export function useStore (initialState) {
   const store = useMemo(() => initializeStore(initialState), [initialState])
   return store
 }
