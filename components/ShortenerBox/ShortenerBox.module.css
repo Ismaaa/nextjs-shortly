@@ -22,28 +22,13 @@
   border-radius: 15px;
   max-width: 1300px;
   position: relative;
+}
 
-  @media screen and (min-width: 1440px) {
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    background-image: url("/assets/bg-shorten-desktop.svg");
-    background-position: center;
-    background-size: cover;
-    height: 86px;
-  }
-
-  button {
-    width: 100%;
-    font-size: 20px;
-    padding: 12px 45px;
-    margin-top: 5px;
-
-    @media screen and (min-width: 1440px) {
-      max-width: 200px;
-      margin-top: 0;
-    }
-  }
+.ShortenerBox__box button {
+  width: 100%;
+  font-size: 20px;
+  padding: 12px 45px;
+  margin-top: 5px;
 }
 
 .ShortenerBox__feedback {
@@ -54,9 +39,25 @@
   position: absolute;
   bottom: 18px;
   left: 60px;
+}
 
-  @media screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
+  .ShortenerBox__box {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-image: url("/assets/bg-shorten-desktop.svg");
+    background-position: center;
+    background-size: cover;
+    height: 86px;
+  }
+
+  .ShortenerBox__box button {
+    max-width: 200px;
+    margin-top: 0;
+  }
+
+  .ShortenerBox__feedback {
     display: block;
   }
 }
-

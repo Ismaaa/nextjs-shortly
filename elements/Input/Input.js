@@ -1,10 +1,11 @@
+import styles from './Input.module.css'
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const Input = ({ name, placeholder, handleChange, type, error }) => (
   <input
     name={name}
-    className={`Input ${error && 'Input--error'}`}
+    className={`${styles.Input} ${error ? styles['Input--error'] : ''}`}
     placeholder={placeholder}
     type={type}
     onChange={handleChange}

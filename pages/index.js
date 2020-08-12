@@ -2,6 +2,8 @@ import Footer from "../components/Footer/";
 import Cta from "../components/Cta/";
 import Steps from "../components/Steps";
 import Subtitle from "../components/elements/Subtitle";
+import ShortenerBox from "../components/ShortenerBox";
+// import LinksList from "../components/LinksList";
 
 export default function Shortly() {
   return (
@@ -11,7 +13,7 @@ export default function Shortly() {
       {/*  <Hero />*/}
       {/*  <Headline />*/}
       {/*</div>*/}
-      {/*<ShortenerBox />*/}
+      <ShortenerBox />
       {/*<LinksList />*/}
       <div className="section">
         <Subtitle text="Advanced Statistics" />

@@ -10,22 +10,24 @@
   font-weight: 700;
   font-size: 18px;
   box-sizing: border-box;
+}
 
-  &--error {
-    border: 2px solid var(--color-warning);
-  }
+.Input--error {
+  border: 2px solid var(--color-warning);
+}
 
-  @media screen and (min-width: 1440px) {
+.Input::placeholder {
+  color: var(--color-secondary-light);
+}
+
+.Input--error::placeholder {
+  color: var(--color-warning);
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1440px) {
+  .Input {
     margin: 0 15px 0 25px;
     max-height: 60px;
-  }
-
-  &::placeholder {
-    color: var(--color-secondary-light);
-  }
-
-  &--error::placeholder {
-    color: var(--color-warning);
-    opacity: 0.5;
   }
 }
