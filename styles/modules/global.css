@@ -17,6 +17,20 @@ body {
   align-items: center;
 }
 
+.paragraph {
+  color: var(--color-secondary-light);
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 28px;
+  margin: 0 12px 35px;
+}
+
+.paragraph--small {
+  font-size: 15px;
+  margin: 0 40px 45px;
+  letter-spacing: 0;
+}
+
 @media screen and (min-width: 1440px) {
   .heading {
     display: flex;
@@ -24,5 +38,13 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: 70px;
+  }
+
+  .paragraph {
+    max-width: 500px;
+  }
+
+  .paragraph--left {
+    text-align: left;
   }
 }
