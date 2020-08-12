@@ -31,6 +31,14 @@ body {
   letter-spacing: 0;
 }
 
+.title {
+  font-size: 43px;
+  margin: 50px 10px 25px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-secondary-darker);
+}
+
 @media screen and (min-width: 1440px) {
   .heading {
     display: flex;
@@ -45,6 +53,11 @@ body {
   }
 
   .paragraph--left {
+    text-align: left;
+  }
+
+  .title {
+    font-size: 67px;
     text-align: left;
   }
 }

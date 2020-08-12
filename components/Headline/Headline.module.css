@@ -1,5 +1,5 @@
-.Headline {
-  @media screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
+  .Headline {
     background-size: contain;
     background-position: right;
     width: 512px;

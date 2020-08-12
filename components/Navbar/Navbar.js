@@ -1,24 +1,25 @@
+import styles from './Navbar.module.css';
 import React from 'react';
-import Button from '../elements/Button';
+import Button from '../../elements/Button';
 
 const Navbar = () => (
-  <nav className="Navbar">
+  <nav className={styles.Navbar}>
     <img src="/assets/logo.svg" alt="Shortly" className="Navbar__logo" />
-    <div className="Navbar__links">
-      <div className="Navbar__navigation">
-        <div className="Navbar__navigationItem">Features</div>
-        <div className="Navbar__navigationItem">Pricing</div>
-        <div className="Navbar__navigationItem">Resources</div>
+    <div className={styles['Navbar__links']}>
+      <div className={styles['Navbar__navigation']}>
+        <div className={styles['Navbar__navigationItem']}>Features</div>
+        <div className={styles['Navbar__navigationItem']}>Pricing</div>
+        <div className={styles['Navbar__navigationItem']}>Resources</div>
       </div>
-      <div className="Navbar__auth">
-        <div className="Navbar__navigationItem">Login</div>
+      <div className={styles['Navbar__auth']}>
+        <div className={styles['Navbar__navigationItem']}>Login</div>
         <Button title="Sign Up" rounded small />
       </div>
     </div>
-    <div className="Navbar__burger">
-      <span className="Navbar__burger-slice" />
-      <span className="Navbar__burger-slice" />
-      <span className="Navbar__burger-slice" />
+    <div className={styles['Navbar__burger']}>
+      <span className={styles['Navbar__burger-slice']} />
+      <span className={styles['Navbar__burger-slice']} />
+      <span className={styles['Navbar__burger-slice']} />
     </div>
   </nav>
 );

@@ -1,17 +1,16 @@
+import styles from './Headline.module.css'
 import React from 'react';
-import Title from '../elements/Title';
-import Text from '../elements/Text';
-import Button from '../elements/Button';
+import Button from '../../elements/Button';
 
 const Headline = () => (
-  <div className="Headline">
-    <Title text="More than just shorter links" />
-    <Text left>
+  <div className={styles.Headline}>
+    <h1 className="title">More than just shorter links</h1>
+    <p className="paragraph paragraph--left">
       Build your brand's recognition and get detailed insights on how your links
       are performing.
-    </Text>
+    </p>
     <div className="section">
-      <Button title="Get Started" rounded left />
+      <Button title="Get Started" rounded left/>
     </div>
   </div>
 );

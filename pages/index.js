@@ -3,16 +3,19 @@ import Cta from "../components/Cta/";
 import Steps from "../components/Steps";
 import Subtitle from "../components/elements/Subtitle";
 import ShortenerBox from "../components/ShortenerBox";
+import Headline from "../components/Headline";
+import Hero from "../components/Hero";
+import Navbar from "../components/Navbar";
 // import LinksList from "../components/LinksList";
 
 export default function Shortly() {
   return (
     <div className="Shortly">
-      {/*<Navbar />*/}
-      {/*<div className="heading">*/}
-      {/*  <Hero />*/}
-      {/*  <Headline />*/}
-      {/*</div>*/}
+      <Navbar />
+      <div className="heading">
+        <Hero />
+        <Headline />
+      </div>
       <ShortenerBox />
       {/*<LinksList />*/}
       <div className="section">
