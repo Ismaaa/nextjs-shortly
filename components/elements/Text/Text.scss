@@ -1,0 +1,23 @@
+.Text {
+  color: var(--color-secondary-light);
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 28px;
+  margin: 0 12px 35px;
+
+  @media screen and (min-width: 1440px) {
+    max-width: 500px;
+  }
+
+  &--smaller {
+    font-size: 15px;
+    margin: 0 40px 45px;
+    letter-spacing: 0;
+  }
+
+  &--left {
+    @media screen and (min-width: 1440px) {
+      text-align: left;
+    }
+  }
+}
