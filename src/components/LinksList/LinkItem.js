@@ -35,14 +35,6 @@ const LinkItem = ({ link }) => {
             ${styles['LinksList__copyToClipboard']}
             ${showCopiedText ? styles['LinksList__copyToClipboard--copied'] : ''}
           `}>{showCopiedText ? 'Copied!' : 'Copy'}</span>
-          {/*<Button*/}
-          {/*  title={}*/}
-          {/*  small*/}
-          {/*  rectangle*/}
-          {/*  alternative={showCopiedText}*/}
-          {/*  handleClick={() => handleCopy()}*/}
-          {/*/>*/}
-
         </CopyToClipboard>
       </div>
     </div>
