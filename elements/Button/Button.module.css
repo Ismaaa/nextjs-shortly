@@ -1,0 +1,46 @@
+.Button {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 12px 45px;
+  font-size: 23px;
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--color-white);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: var(--color-primary-light);
+}
+
+.Button:focus {
+  border: none;
+  outline: none;
+}
+
+.Button--small {
+  padding: 8px 25px;
+  font-size: 15px;
+}
+
+
+.Button--alternative, .Button--alternative:hover {
+  background-color: var(--color-secondary);
+}
+
+.Button--rectangle {
+  border-radius: 4px;
+  padding: 8px 35px;
+}
+
+.Button--rounded {
+  border-radius: 40px;
+}
+
+@media screen and (min-width: 1440px) {
+  .Button--left {
+    align-self: flex-start;
+    justify-self: flex-start;
+  }
+}
