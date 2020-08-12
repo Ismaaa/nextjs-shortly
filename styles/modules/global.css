@@ -1,0 +1,28 @@
+* {
+  outline: none;
+}
+
+body {
+  background-color: var(--color-gray-light);
+}
+
+.heading {
+  background-color: white;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 1440px) {
+  .heading {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+  }
+}

@@ -16,7 +16,6 @@
 
 .Button:focus {
   border: none;
-  outline: none;
 }
 
 .Button--small {
