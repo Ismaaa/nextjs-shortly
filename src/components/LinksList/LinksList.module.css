@@ -17,10 +17,6 @@
   margin-bottom: 18px;
   padding: 28px;
   width: 76%;
-
-  @media screen and (min-width: 1440px) {
-    flex-direction: row;
-  }
 }
 
 .LinksList__link {
@@ -29,11 +25,6 @@
   word-wrap: break-word;
   width: 100%;
   margin-bottom: 25px;
-
-  @media screen and (min-width: 1440px) {
-    word-break: break-word;
-    margin: 0 35px 0 0;
-  }
 }
 
 .LinksList__actions {
@@ -42,10 +33,6 @@
   justify-content: center;
   align-items: center;
   flex: 1;
-
-  @media screen and (min-width: 1440px) {
-    flex-direction: row;
-  }
 }
 
 .LinksList__generatedLink {
@@ -54,8 +41,44 @@
   cursor: pointer;
   text-decoration: none;
   margin-bottom: 25px;
+}
 
-  @media screen and (min-width: 1440px) {
+.LinksList__copyToClipboard {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 8px 25px;
+  font-size: 15px;
+  font-family: inherit;
+  font-weight: 700;
+  color: var(--color-white);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.LinksList__copyToClipboard:hover {
+  background-color: var(--color-primary-light);
+}
+
+.LinksList__copyToClipboard--copied, .LinksList__copyToClipboard--copied:hover {
+  background-color: var(--color-secondary);
+}
+
+@media screen and (min-width: 1440px) {
+  .LinksList__item {
+    flex-direction: row;
+  }
+
+  .LinksList__link {
+    word-break: break-word;
+    margin: 0 35px 0 0;
+  }
+
+  .LinksList__actions {
+    flex-direction: row;
+  }
+
+  .LinksList__generatedLink {
     margin: 0 25px 0 0;
   }
 }
+

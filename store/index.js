@@ -3,7 +3,7 @@ import {createStore, applyMiddleware, combineReducers} from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import thunkMiddleware from 'redux-thunk'
 
-import apiReducer  from './ducks/api';
+import apiReducer, {apiMiddleware} from './ducks/api';
 import linksReducer from './ducks/links';
 
 const rootReducer = combineReducers({
@@ -17,7 +17,7 @@ function initStore(initialState) {
   return createStore(
     rootReducer,
     initialState,
-    composeWithDevTools(applyMiddleware(thunkMiddleware))
+    composeWithDevTools(applyMiddleware(thunkMiddleware, apiMiddleware))
   )
 }
 

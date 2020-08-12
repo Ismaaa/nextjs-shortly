@@ -2,7 +2,7 @@ import styles from './Button.module.css'
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({title, rounded, handleClick, small, left}) => {
+const Button = ({title, rounded, handleClick, small, left, alternative}) => {
   return (
     <button
       type="submit"
@@ -11,6 +11,7 @@ const Button = ({title, rounded, handleClick, small, left}) => {
         ${rounded ? styles['Button--rounded'] : ''}
         ${small ? styles['Button--small'] : ''}
         ${left ? styles['Button--left'] : ''}
+        ${alternative ? styles['Button--alternative'] : ''}
       `}
       onClick={handleClick}
     >
@@ -24,6 +25,7 @@ Button.defaultProps = {
   rounded: false,
   small: false,
   left: false,
+  alternative: false,
   handleClick: () => {
   },
 };

@@ -24,10 +24,6 @@
 }
 
 
-.Button--alternative, .Button--alternative:hover {
-  background-color: var(--color-secondary);
-}
-
 .Button--rectangle {
   border-radius: 4px;
   padding: 8px 35px;

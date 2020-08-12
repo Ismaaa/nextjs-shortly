@@ -1,6 +1,8 @@
+import styles from './LinksList.module.css'
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Button from "../../elements/Button";
 
 const LinkItem = ({ link }) => {
   const [showCopiedText, setShowCopiedText] = useState(false);
@@ -14,11 +16,11 @@ const LinkItem = ({ link }) => {
   };
 
   return (
-    <div className="LinksList__item">
-      <span className="LinksList__link">{link.url}</span>
-      <div className="LinksList__actions">
+    <div className={styles['LinksList__item']}>
+      <span className={styles['LinksList__link']}>{link.url}</span>
+      <div className={styles['LinksList__actions']}>
         <a
-          className="LinksList__generatedLink"
+          className={styles['LinksList__generatedLink']}
           href={`https://rel.ink/${link.hashid}`}
           target="_blank"
           rel="noreferrer"
@@ -29,14 +31,18 @@ const LinkItem = ({ link }) => {
           onCopy={handleCopy}
           text={`https://rel.ink/${link.hashid}`}
         >
-          <button
-            className={`Button Button--small ${
-              showCopiedText && 'Button--alternative'
-            } Button--rectangle`}
-            type="button"
-          >
-            {showCopiedText ? 'Copied!' : 'Copy'}
-          </button>
+          <span className={`
+            ${styles['LinksList__copyToClipboard']}
+            ${showCopiedText ? styles['LinksList__copyToClipboard--copied'] : ''}
+          `}>{showCopiedText ? 'Copied!' : 'Copy'}</span>
+          {/*<Button*/}
+          {/*  title={}*/}
+          {/*  small*/}
+          {/*  rectangle*/}
+          {/*  alternative={showCopiedText}*/}
+          {/*  handleClick={() => handleCopy()}*/}
+          {/*/>*/}
+
         </CopyToClipboard>
       </div>
     </div>

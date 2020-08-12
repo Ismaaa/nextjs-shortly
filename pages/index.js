@@ -1,3 +1,4 @@
+import React from "react";
 import Footer from "../src/components/Footer/";
 import Cta from "../src/components/Cta/";
 import Steps from "../src/components/Steps";
@@ -6,8 +7,7 @@ import ShortenerBox from "../src/components/ShortenerBox";
 import Headline from "../src/components/Headline";
 import Hero from "../src/components/Hero";
 import Navbar from "../src/components/Navbar";
-import {useDispatch} from "react-redux";
-// import LinksList from "../components/LinksList";
+import LinksList from "../src/components/LinksList";
 
 export default function Shortly() {
   return (
@@ -18,7 +18,7 @@ export default function Shortly() {
         <Headline />
       </div>
       <ShortenerBox />
-      {/*<LinksList />*/}
+      <LinksList />
       <div className="section">
         <Subtitle text="Advanced Statistics" />
         <p className="paragraph paragraph--small">
