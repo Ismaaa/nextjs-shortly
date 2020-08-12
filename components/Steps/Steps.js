@@ -1,8 +1,9 @@
+import styles from './Steps.module.css'
 import React from 'react';
 import Card from '../Card';
 
 const Steps = () => (
-  <div className="Steps">
+  <div className={styles.Steps}>
     <Card
       image="/assets/icon-brand-recognition.svg"
       title="Brand Recognition"

@@ -1,0 +1,25 @@
+.Steps {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+@media screen and (min-width: 1440px) {
+  .Steps {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .Steps > *:not(:first-child) {
+    margin-left: 30px;
+  }
+  .Steps > *:nth-child(2) {
+    margin-top: 85px;
+  }
+  .Steps > *:nth-child(2) hr {
+    display: none;
+  }
+  .Steps > *:nth-child(3) {
+    margin-top: 125px;
+  }
+}
