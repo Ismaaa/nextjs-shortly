@@ -1,11 +1,12 @@
-import Footer from "../components/Footer/";
-import Cta from "../components/Cta/";
-import Steps from "../components/Steps";
-import Subtitle from "../components/elements/Subtitle";
-import ShortenerBox from "../components/ShortenerBox";
-import Headline from "../components/Headline";
-import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
+import Footer from "../src/components/Footer/";
+import Cta from "../src/components/Cta/";
+import Steps from "../src/components/Steps";
+import Subtitle from "../src/components/elements/Subtitle";
+import ShortenerBox from "../src/components/ShortenerBox";
+import Headline from "../src/components/Headline";
+import Hero from "../src/components/Hero";
+import Navbar from "../src/components/Navbar";
+import {useDispatch} from "react-redux";
 // import LinksList from "../components/LinksList";
 
 export default function Shortly() {
