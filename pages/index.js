@@ -10,7 +10,7 @@ import Navbar from "../components/Navbar";
 
 export default function Shortly() {
   return (
-    <div className="Shortly">
+    <div>
       <Navbar />
       <div className="heading">
         <Hero />

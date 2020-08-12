@@ -6,8 +6,10 @@
   background-position: left;
   background-repeat: no-repeat;
   background-attachment: scroll;
+}
 
-  @media screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
+  .Hero {
     background-size: contain;
     background-position: right;
     width: 733px;
