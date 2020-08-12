@@ -1,6 +1,7 @@
 import Footer from "../components/Footer/";
 import Cta from "../components/Cta/";
 import Steps from "../components/Steps";
+import Subtitle from "../components/elements/Subtitle";
 
 export default function Shortly() {
   return (
@@ -13,8 +14,8 @@ export default function Shortly() {
       {/*<ShortenerBox />*/}
       {/*<LinksList />*/}
       <div className="section">
-        {/*<Subtitle text="Advanced Statistics" />*/}
-        <p className="Text Text--smaller">
+        <Subtitle text="Advanced Statistics" />
+        <p className="paragraph paragraph--small">
           Track how your links are performing across the web with our advanced
           statistics dashboard.
         </p>
