@@ -11,7 +11,7 @@ export default function reducer (state = INITIAL_STATE, action) {
   switch (action.type) {
     case ADD_LINK: {
       const { links } = state
-      links.push(action.payload)
+      links.unshift(action.payload)
 
       return {
         ...state,
